@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "390204569251",
+    "project_id": "login-register-firebase-9c931",
+    "storage_bucket": "login-register-firebase-9c931.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390204569251:android:afff4386b814dda1fc7116",
+        "android_client_info": {
+          "package_name": "com.example.latest_try_dauvan_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1zriGWQoFGZ6aitjCPmgpm-vu9_UURrc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

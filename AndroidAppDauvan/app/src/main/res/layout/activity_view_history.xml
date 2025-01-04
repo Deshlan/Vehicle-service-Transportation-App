@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewHistoryActivity">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back_arrow"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="130dp"
+        android:layout_height="73dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/plaindauvanlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/repairHistoryLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vehicle_repair_service_history"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:id="@+id/table_repair_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="0,1,2,3,4"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/repairHistoryLable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Header Row -->
+        <TableRow android:background="@drawable/table_row_border">
+            <TextView
+                android:text="VIN Nr."
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/table_row_border"
+                android:padding="8dp"
+                android:gravity="center" />
+            <TextView
+                android:text="Date Serviced"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+            <TextView
+                android:text="Reason for Service"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+        </TableRow>
+
+        <!-- Sample Data Row -->
+        <TableRow android:background="@android:color/white">
+            <TextView
+                android:text="1234567890"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+            <TextView
+                android:text="2024-10-01"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+            <TextView
+                android:text="Oil Change"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+        </TableRow>
+        <!-- Add more rows dynamically as needed -->
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/transportationHistoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transportation_history"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/table_repair_history"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:id="@+id/table_transport_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="0,1,2,3,4,5,6"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/transportationHistoryLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Header Row -->
+        <TableRow android:background="@android:color/holo_red_dark">
+            <TextView
+                android:text="VAT Number"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+            <TextView
+                android:text="Type of Goods"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+            <TextView
+                android:text="Date Pickup"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+            <TextView
+                android:text="Date Drop Off"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+            <TextView
+                android:text="Pickup Address"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+            <TextView
+                android:text="Drop Off Address"
+                android:textColor="@android:color/white"
+                android:background="@drawable/table_row_border"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center" />
+        </TableRow>
+
+        <!-- Sample Data Row -->
+        <TableRow android:background="@android:color/white">
+            <TextView
+                android:text="987654321"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+            <TextView
+                android:text="Electronics"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+            <TextView
+                android:text="2024-09-10"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+            <TextView
+                android:text="2024-09-12"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+            <TextView
+                android:text="123 Street"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+            <TextView
+                android:text="456 Avenue"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/table_cell_border" />
+        </TableRow>
+        <!-- Add more rows dynamically as needed -->
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

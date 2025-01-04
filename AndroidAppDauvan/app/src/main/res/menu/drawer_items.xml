@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:icon="@drawable/baseline_fact_check_24"
+            android:id="@+id/navAccountHistory"
+            android:title="@string/account_histroy"/>
+
+        <item
+            android:icon="@drawable/baseline_account_circle_24"
+            android:id="@+id/navAccount"
+            android:title="@string/menu_account"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item
+            android:icon="@drawable/baseline_calendar_month_24"
+            android:id="@+id/navCalender"
+            android:title="@string/menu_calendar"/>
+
+
+        <item
+            android:icon="@drawable/baseline_circle_notifications_24"
+            android:id="@+id/navNotifications"
+            android:title="@string/menu_notfications"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+        <item
+            android:icon="@drawable/baseline_business_center_24"
+            android:id="@+id/navAboutUs"
+            android:title="@string/menu_about_us"/>
+        <item
+            android:icon="@drawable/baseline_arrow_circle_left_24"
+            android:id="@+id/navLogout"
+            android:title="@string/menu_logout"/>
+    </group>
+</menu>
